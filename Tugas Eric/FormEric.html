@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormEric</title>
+    <link rel="stylesheet" href="FormEric.css">
+</head>
+<body>
+    <ul >
+        <h1>Formulir Pendaftaran <br>
+            STMIK KAPUTAMA T.A 2024/2025</h1>
+        <h2>Gelombang1</h2>
+        <p class="text1">Pastikan kembali data yang anda isi sudah benar semua & lengkap sebelum melanjutkan.</p>
+        <p class="text2"><b>Perhatian!</b>field yang bertanda bintang * berarti wajib diisi.</p> 
+    </ul>
+    <li type="none"; class="isi">
+        <h1 class="atas">Data Diri</h1>
+        <table>
+            <from method="post" action="proses.php">
+                <tr >
+                    <td>NIK :*</td>
+                    <td>Nama lengkap :*</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id="nik" type="text" name="nama" size="93" />
+                        <input id="name" type="text" name="nama" size="93" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Tempat / Tanggal Lahir :*</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id="place" type="text" name="tempat_lahir" placeholder="Tempat Lahir" />
+                        <input id="date" type="date" name="tanggal_lahir"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Jenis Kelamin :*</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id="male" type="radio" name="jk" values="laki-laki">Laki-laki</option>
+                        <input id="female" type="radio" name="jk" values="perempuan">Perempuan</option>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Status :*</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id="st-yes" type="radio" name="nikah" values="Menikah">Menikah</option>
+                        <input id="st-no" type="radio" name="nikah" values="Belum Menikah">Belum Menikah</option>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Agama :*</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id="r1" type="radio" name="agama" values="Islam">Islam</option>
+                        <input id="r2" type="radio" name="agama" values="Protestan">Protestan</option>
+                        <input id="r2" type="radio" name="agama" values="Katolik">Katolik</option>
+                        <input id="r2" type="radio" name="agama" values="Hindu">Hindu</option>
+                        <input id="r2" type="radio" name="agama" values="Budha">Budha</option>
+                    </td>
+                </tr>
+                <tr >
+                    <td>Alat Transpotasi</td>
+                    <td>Jenis Tinggal</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><select name="transpotasi" size="1">
+                        <option value="Jalan Kaki">Jalan Kaki</option>
+                        <option value="Angkutan umum/bus/pete-pete">Angkutan umum/bus/pete-pete</option>
+                        <option value="Mobil/bus antar jemput">Mobil/bus antar jemput</option>
+                        <option value="Kereta Api">Kereta Api</option>
+                        <option value="Ojek">Ojek</option>
+                        <option value="Andong/bendi/sado/dokar/delman/becak">Andong/bendi/sado/dokar/delman/becak</option>
+                        <option value="Perahu penyebrangan/rakit/getek">Perahu penyebrangan/rakit/getek</option>
+                        <option value="Kuda">Kuda</option>
+                        <option value="Sepeda">Sepeda</option>
+                        <option value="Sepeda Motor">Sepeda Motor</option>
+                        <option value="Mobil pribadi">Mobil pribadi</option>
+                        <option value="Lainnya">Lainnya</option>
+                        <select>  
+                    
+                        <select name="tempat_tinggal"  size="1">
+                        <option value="Bersama orang tua">Bersama orang tua</option>
+                        <option value="Wali">Wali</option>
+                        <option value="Kost">Kost</option>
+                        <option value="Asrama">Asrama</option>
+                        <option value="Panti asuhan">Panti asuhan</option>
+                        <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr >
+                    <td>Penerima KPS :*</td>
+                    <td>Kewarganegaraan :*</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><select name="kps" size="1">
+                        <option value="Tidak">Tidak</option>
+                        <option value="Ya">Ya</option>
+                        </select>
+                        <select name="warganegara" size="1">
+                        <option value="WNI">WNI</option>
+                        <option value="WNA">WNA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Alamat Lengkap(sesuai KTP) :*</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea id="alamat" name="alamat" ></textarea></td>
+                </tr>
+                <tr>
+                    <td>RT/RW :</td>
+                    <td>Jalan :</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="rt" type="text" name="rt" placeholder="RT" />
+                        <input id="rt" type="text" name="rw" placeholder="RW" />
+                    </td>
+                    <td>
+                        <input id="jalan" type="text" name="jalan"  />
+                    </td>
+                </tr>
+                <tr >
+                    <td>Kode Pos :</td>
+                    <td>Kel/Desa :*</td>
+                </tr>
+                <tr>
+                    <td><input id="t1" type="text" name="Kode Pos" size="90" /></td>
+                    <td><input id="t2" type="text" name="Kel/Desa" size="90" /></td>
+                </tr>
+                <tr >
+                    <td>Dusun :</td>
+                    <td>Kecamatan :*</td>
+                </tr>
+                <tr>
+                    <td><input id="t1" type="text" name="Dusun" size="90" /></td>
+                    <td><input id="t2" type="text" name="Kecamatan" size="90" /></td>
+                </tr>
+                <tr >
+                    <td>NPWP :</td>
+                    <td>Telp/HP :*</td>
+                </tr>
+                <tr>
+                    <td><input id="t1" type="text" name="NPWP" size="90" /></td>
+                    <td><input id="t2" type="text" name="Telp" size="90" /></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input id="mail" type="text" name="email" size="80" /></td>
+                </tr>
+                <tr>
+                    <td>Asal Sekolah :*</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input id="sk" type="text" name="sekolah" /></td>
+                </tr>
+                <tr>
+                    <td>NISN :*</td>
+                </tr>
+                <tr>
+                    <td><input id="ns" type="text" name="nisn" size="90" /></td>
+                </tr>
+                <tr>
+                    <td>Jurusan :*</td>
+                </tr>
+                <tr>
+                    <td><input id="ns" type="text" name="jurusan" size="90" /></td>
+                </tr>
+                <tr>
+                    <td>Alamat :*</td>
+                </tr>
+                <tr>
+                    <td><textarea id="al" name="alamat"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Program Studi :*</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id="p1" type="radio" name="prodi" values="Teknik Informatika (S1)">Teknik Informatika (S1)</option>
+                        <input id="p2" type="radio" name="prodi" values="Sistem Informasi (S1)">Sistem Informasi (S1)</option>
+                        <input id="p2" type="radio" name="prodi" values="Manajemen Informatika (D3)">Manajemen Informatika (D3)</option>
+                        <input id="p2" type="radio" name="prodi" values="Komputerisasi Akuntansi (D3)">Komputerisasi Akuntansi (D3)</option>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Waktu Belajar :*</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id="tr1" type="radio" name="belajar" values="Pagi">Pagi</option>
+                        <input id="tr2" type="radio" name="belajar" values="Sore">Sore</option>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Pilihan Kelas :*</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id="pk1" type="radio" name="kelas" values="Reguler">Reguler</option>
+                        <input id="pk2" type="radio" name="kelas" values="Karyawan">Karyawan</option>
+                        <input id="pk3" type="radio" name="kelas" values="KIP Kuliah">KIP Kuliah</option>
+                    </td>
+                </tr>
+        </table>
+    
+
+        <div class="container">
+            <div class="bar">
+                <h1 class="text">Data Orang Tua</h1>
+                    <button onclick="toggleTable('table1', this)">Isi Data</button>
+            </div>
+                <table id="table1" hidden>
+                    <tr >
+                        <td>Nama Ayah :*</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Ayah" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>NIK :*</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="NIK" size="90" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Tempat / Tanggal Lahir :</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input id="place" type="text" name="tempat_lahir" placeholder="Tempat Lahir" />
+                            <input id="date" type="date" name="tanggal_lahir"  />
+                        </td>
+                    </tr>
+                    <tr >
+                        <td>Pendidikan Terakhir :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Pendidikan" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>Pekerjaan :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Pekerjaan" size="90" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Penghasilan :</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><select name="transpotasi" size="1">
+                            <option value="Kurang dari Rp. 500.000">Kurang dari Rp. 500.000</option>
+                            <option value="Rp. 500.000 - Rp. 999.999">Rp. 500.000 - Rp. 999.999</option>
+                            <option value="Rp. 1.000.000 - Rp. 1.999.999">Rp. 1.000.000 - Rp. 1.999.999</option>
+                            <option value="Rp. 2.000.000 - Rp. 4.999.999">Rp. 2.000.000 - Rp. 4.999.999</option>
+                            <option value="Rp. 5.000.000 - Rp. 20.000.000">Rp. 5.000.000 - Rp. 20.000.000</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alamat Lengkap(sesuai KTP) :*</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea id="alamat" name="alamat" ></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">RT/RW</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input id="rt" type="text" name="rt" placeholder="RT" />
+                            <input id="rt" type="text" name="rw" placeholder="RW" />
+                        </td>
+                    </tr>
+                    <tr >
+                        <td>Kode Pos :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Kode pos" size="80" /></td>
+                    </tr>
+                    <tr >
+                        <td>Kel/Desa :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="kel/desa" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>Kecamatan :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="kecamatan" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>Telp/HP :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="HP" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>NPWP :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="down" type="text" name="npwp" size="90" /></td>
+                    </tr>
+
+
+
+                    <tr >
+                        <td>Nama Ibu :*</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Ayah" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>NIK :*</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="NIK" size="90" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Tempat / Tanggal Lahir :</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input id="place" type="text" name="tempat_lahir" placeholder="Tempat Lahir" />
+                            <input id="date" type="date" name="tanggal_lahir"  />
+                        </td>
+                    </tr>
+                    <tr >
+                        <td>Pendidikan Terakhir :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Pendidikan" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>Pekerjaan :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Pekerjaan" size="90" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Penghasilan :</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><select name="transpotasi" size="1">
+                            <option value="Kurang dari Rp. 500.000">Kurang dari Rp. 500.000</option>
+                            <option value="Rp. 500.000 - Rp. 999.999">Rp. 500.000 - Rp. 999.999</option>
+                            <option value="Rp. 1.000.000 - Rp. 1.999.999">Rp. 1.000.000 - Rp. 1.999.999</option>
+                            <option value="Rp. 2.000.000 - Rp. 4.999.999">Rp. 2.000.000 - Rp. 4.999.999</option>
+                            <option value="Rp. 5.000.000 - Rp. 20.000.000">Rp. 5.000.000 - Rp. 20.000.000</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alamat Lengkap(sesuai KTP) :*</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea id="alamat" name="alamat" ></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">RT/RW</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input id="rt" type="text" name="rt" placeholder="RT" />
+                            <input id="rt" type="text" name="rw" placeholder="RW" />
+                        </td>
+                    </tr>
+                    <tr >
+                        <td>Kode Pos :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Kode pos" size="80" /></td>
+                    </tr>
+                    <tr >
+                        <td>Kel/Desa :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="kel/desa" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>Kecamatan :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="kecamatan" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>Telp/HP :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="HP" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>NPWP :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="npwp" size="90" /></td>
+                    </tr>
+                </table>
+      
+            <div class="bar">
+                <h1 class="text">Data Wali</h1>
+                    <button onclick="toggleTable('table2', this)">Isi Data</button>
+            </div>
+                <table id="table2" hidden>
+                    <tr >
+                        <td>Nama Wali :*</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Ayah" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>NIK :*</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="NIK" size="90" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Tempat / Tanggal Lahir :</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input id="place" type="text" name="tempat_lahir" placeholder="Tempat Lahir" />
+                            <input id="date" type="date" name="tanggal_lahir"  />
+                        </td>
+                    </tr>
+                    <tr >
+                        <td>Pendidikan Terakhir :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Pendidikan" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>Pekerjaan :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Pekerjaan" size="90" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Penghasilan :</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><select name="transpotasi" size="1">
+                            <option value="Kurang dari Rp. 500.000">Kurang dari Rp. 500.000</option>
+                            <option value="Rp. 500.000 - Rp. 999.999">Rp. 500.000 - Rp. 999.999</option>
+                            <option value="Rp. 1.000.000 - Rp. 1.999.999">Rp. 1.000.000 - Rp. 1.999.999</option>
+                            <option value="Rp. 2.000.000 - Rp. 4.999.999">Rp. 2.000.000 - Rp. 4.999.999</option>
+                            <option value="Rp. 5.000.000 - Rp. 20.000.000">Rp. 5.000.000 - Rp. 20.000.000</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alamat Lengkap(sesuai KTP) :*</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea id="alamat" name="alamat" ></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">RT/RW</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input id="rt" type="text" name="rt" placeholder="RT" />
+                            <input id="rt" type="text" name="rw" placeholder="RW" />
+                        </td>
+                    </tr>
+                    <tr >
+                        <td>Kode Pos :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="Kode pos" size="80" /></td>
+                    </tr>
+                    <tr >
+                        <td>Kel/Desa :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="kel/desa" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>Kecamatan :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="kecamatan" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>Telp/HP :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="HP" size="90" /></td>
+                    </tr>
+                    <tr >
+                        <td>NPWP :</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ad" type="text" name="npwp" size="90" /></td>
+                    </tr>
+                </table>
+
+                <table >
+                    <tr>
+                        <td colspan="2">Sumber Informasi Mengenai STMIK Kaputama</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input id="ms1" type="radio" name="sumber" values="Brosur/Spanduk/Poster">Brosur/Spanduk/Poster</option>
+                            <input id="ms2" type="radio" name="sumber" values="Media Massa">Media Massa</option>
+                            <input id="ms2" type="radio" name="sumber" values="Teman/Saudara">Teman/Saudara</option>
+                            <input id="ms2" type="radio" name="sumber" values="Sosmed">Sosmed</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input id="lain" type="text" name="sekolah" placeholder="Lainnya"/></td>
+                    </tr>
+                    <tr>
+                        <td>Password :*</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ns" type="password" name="password" size="90" /></td>
+                    </tr>
+                    <tr>
+                        <td>Foto :*</td>
+                    </tr>
+                    <tr>
+                        <td><input id="ns" type="file" name="foto" size="90" /></td>
+                    </tr>
+
+                </table>
+
+
+                <form>
+                    <input type="checkbox" id="checkbox1" onchange="checkButtonState()"> <label for="checkbox1">Saya telah memastikan data yang saya isi sudah benar.</label><br>
+                    <button id="submitButton" disabled onclick="submitForm()">Simpan</button>
+                </form>
+        </div>
+      
+        <script>
+          function toggleTable(tableId, button) {
+            var table = document.getElementById(tableId);
+          
+            if (table.hidden) {
+              table.hidden = false;
+              button.textContent = "Tutup";
+            } else {
+              table.hidden = true;
+              button.textContent = "Isi Data";
+            }
+          }
+        </script>
+        <script>
+            function checkButtonState() {
+              var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+              var submitButton = document.getElementById('submitButton');
+              var atLeastOneChecked = false;
+          
+              checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                  atLeastOneChecked = true;
+                }
+              });
+          
+              if (atLeastOneChecked) {
+                submitButton.disabled = false;
+              } else {
+                submitButton.disabled = true;
+              }
+            }
+          
+            function submitForm() {
+              // Lakukan aksi simpan disini
+              alert("Form telah disimpan!");
+            }
+          </script>
+    </li>
+</body>
+</html>

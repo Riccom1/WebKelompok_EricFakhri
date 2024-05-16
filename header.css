@@ -1,0 +1,30 @@
+    body {
+    background-color: rgb(11, 10, 10);
+    }
+
+    @font-face {
+    font-family: myFont;
+    src: url(image/ROGLyonsTypeRegular3.ttf);
+    }
+
+    .header {
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .header h1 {
+    color: white;
+    font-family: myFont;
+    margin-right: 20px;
+    letter-spacing: 5px;
+    }
+
+    .header img {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    }
+
+    span {
+    color: red;
+    }

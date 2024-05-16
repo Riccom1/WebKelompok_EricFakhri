@@ -1,0 +1,27 @@
+body{
+    background-image:url(../image/Screenshot\ 2024-03-24\ 112551.png) ;
+    background-size: cover;
+    background-position: auto;
+}
+h1{
+    color: red;
+    font-size: 65px;
+}
+.text{
+    background-color: yellow;
+    width: 800px;
+    height: 690px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+p{
+    text-align: justify;
+    font-size: 50px;
+    text-indent: 50px;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    line-height: 70px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}

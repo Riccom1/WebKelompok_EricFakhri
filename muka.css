@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(image/skull.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding:  35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.782);
+    text-transform:  uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #103cb6d1;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+} 
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background: #0000005d;
+  position:relative;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 43%;
+}
+
+.card::before {
+    content : '';
+    position: absolute;
+    width: 100px;
+    background-image:  linear-gradient(180deg, rgb(35, 40, 43), rgb(140, 140, 147));
+    height: 130%;
+    animation:  rotBGimg 3s linear infinite;
+  }
+
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .card::after {
+    content: '';
+    position: relative;
+    background: #0e2644;
+    inset: 5px;
+    display: block;
+  }
+
+.picture {
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content img {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+svg {
+    font-size: 150px;
+    width: 50%;
+    height: 50%;
+   margin-left: 70px;
+}
+
+.copy {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3px;
+    stroke-dasharray: 8% 30%;
+    stroke-dashoffset: 0%;
+    animation:  textanimation 6s linear infinite;
+}
+
+@keyframes textanimation {
+    100%{
+        stroke-dashoffset: -35%;
+    }
+}
+
+.copy1 {
+    stroke: #fcfbfe;
+    animation-delay: -1s;
+}
+
+.copy2 {
+    stroke: #353132;
+    animation-delay: -2s;
+}
+
+.copy3 {
+    stroke: #ba9b9b;
+    animation-delay: -3s;
+}
+
+.copy4 {
+    stroke: #153f3f;
+    animation-delay: -4s;
+}
+
+.copy5 {
+    stroke: #bbe1fa;
+    animation-delay: -5s;
+}
+
+.text {display: inline-block;}
+
+.a-text {
+  font-size: 2em;
+  letter-spacing: 5px;
+  font-family: monospace;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+      typing 3s steps(105),
+      cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% { border-color: transparent }
+}
+
+@keyframes typing {
+  from { width: 0 }
+}
+
+.about {
+    width: 100%;
+    pad: 100px 0px;
+    background-color: #101010;
+}
+
+.about img {
+    height:auto;
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h2{
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.about-text p {
+    color: #fcfbfe;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size:18px;
+    margin-bottom: 25px;   
+}

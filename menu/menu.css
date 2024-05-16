@@ -1,0 +1,116 @@
+body {
+    background-color: #212121;
+    display: grid;
+    place-self: center;
+    font-family: myFont;
+    }
+
+    @font-face {
+    font-family: myFont;
+    src: url(../image/ROGLyonsTypeRegular3.ttf);
+    }
+
+    button {
+    width: 12em;
+    position: relative;
+    height: 4em;
+    border: 3px ridge rgb(195, 5, 5);
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 40px;
+    }
+
+    button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+    transform-origin: center;
+    }
+
+    button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+    }
+
+    button:hover::before, button:hover::after {
+    transform: scale(0);
+    }
+
+    button:hover {
+    box-shadow: inset 0px 0px 25px rgb(195, 5, 5);
+    }
+
+    button a {
+    font-family: myFont;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    text-decoration: none;
+    }
+
+    button img {
+    width: 40px;
+    height: 40px;
+    }
+
+    .task-list h1 {
+        font-size: 25px;
+        margin-top: 50px;
+        color: #fff;
+    }
+
+    .task-list span {
+        color: rgb(195, 5, 5);
+    }
+
+    .task-list h2 {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .task-date {
+        color: #fff;
+        line-height: 50px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .task {
+        color: #fff;
+        line-height: 50px;
+    }
+
+    .task a{
+        color: #fff;
+        text-decoration: none;
+        border: 2px solid rgb(195, 5, 5);
+        padding: 10px;;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgb(195, 5, 5);
+        font-size: 13px;
+    }
+
+    .task-list h3 {
+        color: #fff;
+        font-size: 15px;
+    }

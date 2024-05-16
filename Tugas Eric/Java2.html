@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Diskon dan Total Pembayaran</title>
+</head>
+<body>
+    <h1>Perhitungan Diskon dan Total Pembayaran</h1>
+    <form id="pembelianForm" onsubmit="return hitungTotal()">
+        <label for="nama">Nama Barang: </label>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="harga">Harga Barang: </label>
+        <input type="number" id="harga" name="harga" min="0" required><br><br>
+
+        <label for="jumlah">Jumlah Barang: </label>
+        <input type="number" id="jumlah" name="jumlah" min="1" required><br><br>
+
+        <button type="submit">Hitung Total</button>
+    </form>
+    <p id="hasil"></p>
+
+    <script type="text/javascript">
+        function hitungTotal() {
+            // Ambil nilai dari input
+            let nama = document.getElementById("nama").value;
+            let harga = parseFloat(document.getElementById("harga").value);
+            let jumlah = parseInt(document.getElementById("jumlah").value);
+            let diskon = 0;
+
+            // Hitung diskon jika jumlah >= 3
+            if (jumlah >= 3) {
+                diskon = 0.1 * harga * jumlah;
+            }
+
+            // Hitung total bayar
+            let totalBayar = (harga * jumlah) - diskon;
+
+            // Tampilkan hasil perhitungan
+            document.getElementById("hasil").innerText = 
+                "Nama Barang: " + nama + "\n" +
+                "Harga Barang: " + harga.toFixed(2) + "\n" +
+                "Jumlah Barang: " + jumlah + "\n" +
+                "Diskon: " + diskon.toFixed(2) + "\n" +
+                "Total Bayar: " + totalBayar.toFixed(2);
+
+            // Mencegah form dari submit default (refresh page)
+            return false;
+        }
+    </script>
+</body>
+</html>

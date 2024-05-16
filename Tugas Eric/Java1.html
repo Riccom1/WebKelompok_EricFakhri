@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Nilai</title>
+</head>
+<body>
+    <h1>Konversi Nilai</h1>
+    <form id="nilaiForm" onsubmit="return konversiNilai()">
+        <label for="nilai">Masukkan Nilai (0-100): </label>
+        <input type="number" id="nilai" name="nilai" min="0" max="100" required>
+        <button type="submit">Konversi</button>
+    </form>
+
+    <script>
+        function konversiNilai() {
+            // Ambil nilai dari input
+            let nilai = document.getElementById("nilai").value;
+            let hasil = "";
+
+            // Konversi nilai ke huruf menggunakan if
+            if (nilai >= 80 && nilai <= 100) {
+                hasil = "A";
+            } else if (nilai >= 70 && nilai < 79) {
+                hasil = "B";
+            } else if (nilai >= 60 && nilai < 69) {
+                hasil = "C";
+            } else if (nilai >= 50 && nilai < 69) {
+                hasil = "D";
+            } else if (nilai >= 40 && nilai < 49) {
+                hasil = "E";
+            } else if (nilai >= 0 && nilai < 39) {
+                hasil = "F";
+            } else {
+                hasil = "Nilai di luar rentang yang ditentukan";
+            }
+
+            // Tampilkan hasil konversi dalam pop-up
+            alert("Nilai Huruf: " + hasil);
+
+            // Mencegah form dari submit default (refresh page)
+            return false;
+        }
+    </script>
+</body>
+</html>

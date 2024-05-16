@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-image: url(image/rog\ gif.gif);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    font-family: myFont;
+  }
+
+  @font-face {
+    font-family: myFont;
+    src: url(image/ROGLyonsTypeRegular3.ttf);
+  }
+
+  .weltext {
+    display: inline-block;
+    margin: 50px;
+  }
+
+  .text {
+    font-size: 4em;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(22), cursor 0.4s step-end infinite alternate;
+  }
+
+  @keyframes cursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  span1 {
+    color: rgb(241, 238, 238);
+  }
+
+  span2 {
+    color: rgb(5, 14, 120);
+  }
+  span3 {
+    color: rgb(195, 5, 5);
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+  }
+
+  .card-details {
+    color: black;
+    height: 100%;
+    gap: 0.5em;
+    display: grid;
+    place-content: center;
+    letter-spacing: 2px;
+  }
+
+  .card-button {
+    font-family: myFont;
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: red;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+  }
+
+  .card-button a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .text-body {
+    color: rgb(195, 5, 5);
+  }
+
+  /*Text*/
+  .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  /*Hover*/
+  .card:hover {
+    border-color: red;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+  }
+
+  .pic {
+    width: 300px;
+    height: 250px;
+    border-radius: 20px;
+    border: 2px solid rgb(5, 14, 120);
+  }
+
+  .text-title span {
+    color:  rgb(195, 5, 5);
+  }
