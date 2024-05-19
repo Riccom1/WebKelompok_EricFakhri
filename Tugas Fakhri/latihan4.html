@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syarat Penerimaan Pegawai</title>
+    <script>
+        function cekKelayakan() {
+            const jenisKelamin = document.getElementById('jenisKelamin').value;
+            const tinggiBadan = parseInt(document.getElementById('tinggiBadan').value);
+            const beratBadan = parseInt(document.getElementById('beratBadan').value);
+            const ipk = parseFloat(document.getElementById('ipk').value);
+            const pendidikan = document.getElementById('pendidikan').value;
+
+            const bbIdeal = tinggiBadan - 110;
+
+            let layak = false;
+            if ((jenisKelamin === 'laki-laki' && tinggiBadan >= 170 && tinggiBadan <= 179 && beratBadan === bbIdeal && ipk >= 3 && ipk <= 4 && (pendidikan === 'D3' || pendidikan === 'S1')) ||
+                (jenisKelamin === 'perempuan' && tinggiBadan >= 160 && tinggiBadan <= 170 && beratBadan === bbIdeal && ipk >= 3 && ipk <= 4 && (pendidikan === 'D3' || pendidikan === 'S1'))) {
+                layak = true;
+            }
+
+            if (layak) {
+                document.getElementById('hasil').textContent = 'Selamat! Anda memenuhi syarat penerimaan pegawai.';
+            } else {
+                document.getElementById('hasil').textContent = 'Maaf, Anda tidak memenuhi syarat penerimaan pegawai.';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Syarat Penerimaan Pegawai</h1>
+    <form onsubmit="cekKelayakan(); return false;">
+        <label for="jenisKelamin">Jenis Kelamin:</label>
+        <select id="jenisKelamin" name="jenisKelamin" required>
+            <option value="laki-laki">Laki-laki</option>
+            <option value="perempuan">Perempuan</option>
+        </select><br><br>
+        
+        <label for="tinggiBadan">Tinggi Badan (cm):</label>
+        <input type="number" id="tinggiBadan" name="tinggiBadan" required><br><br>
+        
+        <label for="beratBadan">Berat Badan (kg):</label>
+        <input type="number" id="beratBadan" name="beratBadan" required><br><br>
+        
+        <label for="ipk">IPK:</label>
+        <input type="number" step="0.01" id="ipk" name="ipk" required><br><br>
+        
+        <label for="pendidikan">Pendidikan:</label>
+        <select id="pendidikan" name="pendidikan" required>
+            <option value="D3">D3</option>
+            <option value="S1">S1</option>
+        </select><br><br>
+        
+        <button type="submit">Cek Kelayakan</button>
+    </form>
+    <pre id="hasil"></pre>
+</body>
+</html>

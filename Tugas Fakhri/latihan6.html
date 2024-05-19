@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Zodiak</title>
+    <script>
+        function hitungZodiak() {
+            const tanggal = parseInt(document.getElementById('tanggal').value);
+            const bulan = parseInt(document.getElementById('bulan').value);
+
+            let zodiak = '';
+            let kesehatan = '';
+            let asmara = '';
+            let keuangan = '';
+            let karier = '';
+
+            // Menentukan zodiak berdasarkan tanggal dan bulan
+            if ((tanggal >= 21 && bulan == 3) || (tanggal <= 19 && bulan == 4)) {
+                zodiak = 'Aries';
+            } else if ((tanggal >= 20 && bulan == 4) || (tanggal <= 20 && bulan == 5)) {
+                zodiak = 'Taurus';
+            } else if ((tanggal >= 21 && bulan == 5) || (tanggal <= 20 && bulan == 6)) {
+                zodiak = 'Gemini';
+            } else if ((tanggal >= 21 && bulan == 6) || (tanggal <= 22 && bulan == 7)) {
+                zodiak = 'Cancer';
+            } else if ((tanggal >= 23 && bulan == 7) || (tanggal <= 22 && bulan == 8)) {
+                zodiak = 'Leo';
+            } else if ((tanggal >= 23 && bulan == 8) || (tanggal <= 22 && bulan == 9)) {
+                zodiak = 'Virgo';
+            } else if ((tanggal >= 23 && bulan == 9) || (tanggal <= 22 && bulan == 10)) {
+                zodiak = 'Libra';
+            } else if ((tanggal >= 23 && bulan == 10) || (tanggal <= 21 && bulan == 11)) {
+                zodiak = 'Scorpio';
+            } else if ((tanggal >= 22 && bulan == 11) || (tanggal <= 21 && bulan == 12)) {
+                zodiak = 'Sagittarius';
+            } else if ((tanggal >= 22 && bulan == 12) || (tanggal <= 19 && bulan == 1)) {
+                zodiak = 'Capricorn';
+            } else if ((tanggal >= 20 && bulan == 1) || (tanggal <= 18 && bulan == 2)) {
+                zodiak = 'Aquarius';
+            } else if ((tanggal >= 19 && bulan == 2) || (tanggal <= 20 && bulan == 3)) {
+                zodiak = 'Pisces';
+            } else {
+                zodiak = 'Tanggal atau bulan tidak valid';
+            }
+
+            // Ramalan kesehatan, asmara, keuangan, dan karier
+            switch (zodiak) {
+                case 'Aries':
+                    kesehatan = 'Anda dalam kondisi prima, tetap jaga kesehatan Anda.';
+                    asmara = 'Hubungan asmara Anda sedang hangat-hangatnya.';
+                    keuangan = 'Keuangan Anda stabil, namun tetap harus bijak dalam mengatur pengeluaran.';
+                    karier = 'Karier Anda sedang menanjak, teruslah bekerja keras.';
+                    break;
+                case 'Taurus':
+                    kesehatan = 'Jaga pola makan Anda agar tetap sehat.';
+                    asmara = 'Ada sedikit masalah dalam hubungan asmara, bicarakan baik-baik dengan pasangan.';
+                    keuangan = 'Keuangan Anda cukup baik, pertimbangkan investasi kecil.';
+                    karier = 'Ada peluang baru di karier, jangan ragu untuk mengambilnya.';
+                    break;
+                case 'Gemini':
+                    kesehatan = 'Luangkan waktu untuk istirahat yang cukup.';
+                    asmara = 'Hari ini adalah waktu yang tepat untuk kencan romantis.';
+                    keuangan = 'Keuangan Anda sedikit menurun, hindari pengeluaran tidak perlu.';
+                    karier = 'Tetap fokus pada tujuan karier Anda, jangan mudah terpengaruh.';
+                    break;
+                case 'Cancer':
+                    kesehatan = 'Perhatikan kesehatan mental Anda, lakukan hal-hal yang menyenangkan.';
+                    asmara = 'Hubungan dengan keluarga semakin harmonis.';
+                    keuangan = 'Keuangan Anda stabil, bisa menabung lebih banyak.';
+                    karier = 'Pekerjaan sedang banyak, atur waktu dengan baik.';
+                    break;
+                case 'Leo':
+                    kesehatan = 'Tetap aktif berolahraga untuk menjaga kesehatan.';
+                    asmara = 'Asmara sedang dalam masa sulit, bersabar dan berpikiran terbuka.';
+                    keuangan = 'Keuangan sedikit menurun, hindari pembelian impulsif.';
+                    karier = 'Karier Anda berjalan baik, ada kemungkinan kenaikan jabatan.';
+                    break;
+                case 'Virgo':
+                    kesehatan = 'Kesehatan fisik dan mental perlu diperhatikan.';
+                    asmara = 'Hubungan asmara Anda sedang dalam masa tenang.';
+                    keuangan = 'Keuangan Anda cukup stabil, tidak ada masalah besar.';
+                    karier = 'Karier Anda berjalan lancar, ada peluang untuk proyek baru.';
+                    break;
+                case 'Libra':
+                    kesehatan = 'Jaga keseimbangan antara pekerjaan dan istirahat.';
+                    asmara = 'Asmara Anda harmonis, penuh dengan kebahagiaan.';
+                    keuangan = 'Keuangan Anda stabil, bisa merencanakan liburan kecil.';
+                    karier = 'Karier Anda sedang berkembang, ada peluang untuk naik jabatan.';
+                    break;
+                case 'Scorpio':
+                    kesehatan = 'Jaga kesehatan dengan menghindari makanan cepat saji.';
+                    asmara = 'Asmara Anda penuh gairah, hubungan semakin erat.';
+                    keuangan = 'Keuangan Anda cukup baik, bisa menabung lebih banyak.';
+                    karier = 'Karier Anda menantang, ada peluang besar menunggu.';
+                    break;
+                case 'Sagittarius':
+                    kesehatan = 'Perhatikan kesehatan mental Anda, hindari stres berlebihan.';
+                    asmara = 'Asmara sedang dalam masa romantis, nikmati momen ini.';
+                    keuangan = 'Keuangan Anda baik, ada pemasukan tambahan.';
+                    karier = 'Karier Anda berjalan lancar, ada kesempatan untuk proyek besar.';
+                    break;
+                case 'Capricorn':
+                    kesehatan = 'Kesehatan Anda prima, teruskan gaya hidup sehat.';
+                    asmara = 'Hubungan asmara Anda stabil, penuh pengertian.';
+                    keuangan = 'Keuangan Anda sangat baik, pertimbangkan investasi jangka panjang.';
+                    karier = 'Karier Anda sedang menanjak, ada peluang besar di depan mata.';
+                    break;
+                case 'Aquarius':
+                    kesehatan = 'Jaga pola makan dan rajin berolahraga.';
+                    asmara = 'Asmara Anda penuh kejutan, nikmati setiap momennya.';
+                    keuangan = 'Keuangan Anda stabil, namun tetap perlu bijak dalam pengeluaran.';
+                    karier = 'Karier Anda berkembang, ada peluang baru menanti.';
+                    break;
+                case 'Pisces':
+                    kesehatan = 'Perhatikan kesehatan mental Anda, luangkan waktu untuk relaksasi.';
+                    asmara = 'Asmara Anda sedang dalam masa tenang, nikmati kebersamaan.';
+                    keuangan = 'Keuangan Anda stabil, ada peluang untuk menabung lebih banyak.';
+                    karier = 'Karier Anda berjalan lancar, ada kesempatan untuk proyek baru.';
+                    break;
+                default:
+                    kesehatan = 'Data tidak valid.';
+                    asmara = 'Data tidak valid.';
+                    keuangan = 'Data tidak valid.';
+                    karier = 'Data tidak valid.';
+            }
+
+            document.getElementById('hasil').textContent =
+                `Zodiak: ${zodiak}\n` +
+                `Kesehatan: ${kesehatan}\n` +
+                `Asmara: ${asmara}\n` +
+                `Keuangan: ${keuangan}\n` +
+                `Karier: ${karier}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Game Zodiak</h1>
+    <form onsubmit="hitungZodiak(); return false;">
+        <label for="tanggal">Tanggal Lahir:</label>
+        <input type="number" id="tanggal" name="tanggal" required><br><br>
+        
+        <label for="bulan">Bulan Lahir:</label>
+        <input type="number" id="bulan" name="bulan" required><br><br>
+        
+        <button type="submit">Cek Zodiak</button>
+    </form>
+    <pre id="hasil"></pre>
+</body>
+</html>

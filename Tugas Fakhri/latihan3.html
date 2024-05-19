@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Gaji</title>
+    <script>
+        function hitungGaji() {
+            const jumlahHariKerja = parseInt(document.getElementById('jumlahHariKerja').value);
+            const jumlahJamLembur = parseInt(document.getElementById('jumlahJamLembur').value);
+
+            const gajiPerHari = 50000;
+            let totalGaji = gajiPerHari * jumlahHariKerja;
+
+            let uangLembur = 0;
+            if (jumlahJamLembur > 0) {
+                if (jumlahJamLembur >= 3) {
+                    uangLembur = 2 * 25000 + (jumlahJamLembur - 2) * 35000;
+                } else {
+                    uangLembur = jumlahJamLembur * 25000;
+                }
+            }
+
+            let uangMakan = 0;
+            if (jumlahHariKerja >= 20) {
+                uangMakan = 5000 * jumlahHariKerja;
+            }
+
+            totalGaji += uangLembur + uangMakan;
+
+            document.getElementById('hasil').textContent = 
+                `Gaji Pokok: Rp${(gajiPerHari * jumlahHariKerja).toFixed(2)}\n` +
+                `Uang Lembur: Rp${uangLembur.toFixed(2)}\n` +
+                `Uang Makan: Rp${uangMakan.toFixed(2)}\n` +
+                `Total Gaji: Rp${totalGaji.toFixed(2)}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Perhitungan Gaji</h1>
+    <form onsubmit="hitungGaji(); return false;">
+        <label for="jumlahHariKerja">Jumlah Hari Kerja:</label>
+        <input type="number" id="jumlahHariKerja" name="jumlahHariKerja" required><br><br>
+        
+        <label for="jumlahJamLembur">Jumlah Jam Lembur:</label>
+        <input type="number" id="jumlahJamLembur" name="jumlahJamLembur" required><br><br>
+        
+        <button type="submit">Hitung Gaji</button>
+    </form>
+    <pre id="hasil"></pre>
+</body>
+</html>
