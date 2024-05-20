@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    </head>
+    <style>
+    .detik {
+        text-align: center;
+        margin-top: 20%;
+        font-size: 30px;
+    }
+    </style>
+    <body>
+    <div class="detik">
+        <script type="text/javascript">
+        var secondsInput = parseInt(prompt("Masukkan jumlah detik pemakaian:"));
+        var pulsa = 30 / 45;
+
+        var biaya = secondsInput * pulsa;
+
+        var jam = Math.floor(secondsInput / 3600); 
+
+        var sisaDetikSetelahJam = secondsInput % 3600;
+
+        var menit = Math.floor(sisaDetikSetelahJam / 60);
+
+        var sisaDetikSetelahMenit = sisaDetikSetelahJam % 60;
+
+        var sisaDetikAkhir = sisaDetikSetelahMenit;
+
+        document.write("<h2> Tagihan </h2>");
+        document.write("Total detik: " + secondsInput + "detik<br>");
+        document.write("Jam: " + jam + " jam<br>");
+        document.write("Menit: " + menit + " menit<br>");
+        document.write("Detik: " + sisaDetikAkhir + " detik<br>");
+        document.write("Total biaya: Rp " + biaya.toFixed(2));
+        </script>
+    </div>
+    </body>
+</html>
