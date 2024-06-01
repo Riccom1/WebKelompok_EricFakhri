@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="detik">
+        <h2>Tagihan</h2>
+        <label for="secondsInput">Jumlah Detik Pemakaian</label><br />
+        <input type="number" id="secondsInput" placeholder="Masukkan jumlah detik pemakaian">
+        <button onclick="calculateCost()">Hitung Biaya</button>
+        <div class="output-container">
+            <div class="output-field">
+                <label for="totalCost">Total Biaya:</label><br />
+                <input type="text" id="totalCost" readonly><br />
+            </div>
+            <div class="output-field">
+                <label for="hours">Jam:</label><br />
+                <input type="text" id="hours" readonly><br />
+            </div>
+            <div class="output-field">
+                <label for="minutes">Menit:</label><br />
+                <input type="text" id="minutes" readonly><br />
+            </div>
+            <div class="output-field">
+                <label for="seconds">Detik:</label><br />
+                <input type="text" id="seconds" readonly><br />
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            function calculateCost() {
+                var secondsInput = parseInt(document.getElementById('secondsInput').value);
+
+                var pulsa = 30 / 45;
+
+                var biaya = secondsInput * pulsa;
+
+                var jam = Math.floor(secondsInput / 3600);
+
+                var sisaDetikSetelahJam = secondsInput % 3600;
+
+                var menit = Math.floor(sisaDetikSetelahJam / 60);
+
+                var sisaDetikSetelahMenit = sisaDetikSetelahJam % 60;
+
+
+                document.getElementById('totalCost').value = "Rp " + biaya.toFixed(2);
+                document.getElementById('hours').value = jam + " jam";
+                document.getElementById('minutes').value = menit + " menit";
+                document.getElementById('seconds').value = sisaDetikSetelahMenit + " detik";
+            }
+        </script>
+    </div>
+</body>
+</html>

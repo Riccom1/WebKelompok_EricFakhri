@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Konversi Nilai</title>
+</head>
+<body>
+<script type="text/javascript">
+function hitungKonversi() {
+    var nilai = parseInt(document.getElementById('nilai').value);
+    var konversi = '';
+
+    if (!isNaN(nilai)) {
+        if (nilai >= 80 && nilai <= 100) {
+            konversi = 'A';
+        } else if (nilai >= 70 && nilai <= 79) {
+            konversi = 'B';
+        } else if (nilai >= 60 && nilai <= 69) {
+            konversi = 'C';
+        } else if (nilai >= 50 && nilai <= 59) {
+            konversi = 'D';
+        } else if (nilai < 50 && nilai >= 0) {
+            konversi = 'E';
+        } else {
+            konversi = 'Nilai tidak valid';
+        }
+    }
+    document.getElementById('hasilKonversi').value = konversi;
+}
+</script>
+<form id="formKonversi">
+    <label for="nilai">Masukkan Nilai:</label><br>
+    <input type="number" id="nilai" name="nilai"><br><br>
+    <button type="button" onclick="hitungKonversi()">Konversi</button><br />
+    
+    <label for="hasilKonversi">Hasil Konversi:</label><br>
+    <input type="text" id="hasilKonversi" name="hasilKonversi" disabled><br><br>
+</form>
+</body>
+</html>
