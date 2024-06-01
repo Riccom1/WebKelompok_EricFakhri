@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Zodiak</title>
+    <style>
+        .zodiak {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: myFont;
+        }
+        @font-face {
+            font-family: myFont;
+            src: url(../image/ROGLyonsTypeRegular3.ttf);
+        }
+        .input-field {
+            background-image: url(../image/backimg-mobile.jpg);
+            background-size: cover;
+            background-position: center;
+            border-top-left-radius:  50%;
+            border-bottom-right-radius: 50%;
+            width: 700px;
+            height: 600px;
+            color: #fff;
+            display: grid;
+            place-content: center;
+            box-shadow: 10px 10px 10px rgb(49, 46, 46);
+        }
+        .input-field h1 {
+            text-align: center;
+        }
+        input {
+            width: 300px;
+            height: 25px;
+            border-top-left-radius:  20%;
+            border-bottom-right-radius: 20%;
+        }
+        button {
+            font-size: 15px;
+            border-radius: 20px;
+            font-family: myFont;
+            cursor: pointer;
+            background-color: gray;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="zodiak">
+    <div class="input-field">
+    <h1>Game Zodiak</h1>
+    <form id="zodiakForm" onsubmit="return tampilkanZodiak()">
+        <label for="tgl">Tanggal Lahir :</label>
+        <input type="number" id="tgl" name="tgl" min="1" max="31" required><br><br>
+
+        <label for="bln">Bulan Lahir :</label>
+        <input type="number" id="bln" name="bln" min="1" max="12" required><br><br>
+
+        <button type="submit">Cek Zodiak</button><br><br>
+    </form>
+
+    <form id="hasilForm">
+        <label>Zodiak :</label><br />
+        <input type="text" id="zodiak" readonly><br><br>
+
+        <label>Kesehatan :</label><br />
+        <input type="text" id="kesehatan" readonly><br><br>
+
+        <label>Asmara :</label><br />
+        <input type="text" id="asmara" readonly><br><br>
+
+        <label>Keuangan :</label><br />
+        <input type="text" id="keuangan" readonly><br><br>
+
+        <label>Karier :</label><br />
+        <input type="text" id="karier" readonly><br><br>
+    </form>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        function tampilkanZodiak() {
+            let tgl = parseInt(document.getElementById("tgl").value);
+            let bln = parseInt(document.getElementById("bln").value);
+            let zodiak = "", kesehatan = "", asmara = "", keuangan = "", karier = "";
+
+
+            if ((tgl >= 20 && tgl <=31 && bln == 1) || (tgl >= 1 && tgl <= 18 && bln == 2)) {
+                zodiak = "Aquarius";
+                kesehatan = "Hindari aktivitas berisiko.";
+                asmara = "Hubungan asmara stabil.";
+                keuangan = "Keuangan akan aman.";
+                karier = "Proyek baru akan dimulai.";
+            } else if ((tgl >= 19  && tgl <= 28 && bln == 2) || (tgl >= 1 && tgl <= 20 && bln == 3)) {
+                zodiak = "Pisces";
+                kesehatan = "Perhatikan kesehatan mental Anda.";
+                asmara = "Cinta akan semakin kuat.";
+                keuangan = "Keuangan cukup stabil.";
+                karier = "Kesempatan karier baru akan datang.";
+            } else if ((tgl >= 21 && tgl <= 31 && bln == 3) || (tgl >= 1 && tgl <= 19 && bln == 4)) {
+                zodiak = "Aries";
+                kesehatan = "Tetap jaga kesehatan mental Anda.";
+                asmara = "Hubungan asmara akan berkembang.";
+                keuangan = "Keuangan cukup stabil.";
+                karier = "Kesempatan karier baru akan datang.";
+            } else if ((tgl >= 20 &&  tgl <= 30 && bln == 4) || (tgl >= 1 && tgl <= 20 && bln == 5)) {
+                zodiak = "Taurus";
+                kesehatan = "Perhatikan asupan makanan Anda.";
+                asmara = "Keharmonisan dalam hubungan asmara.";
+                keuangan = "Pemasukan akan meningkat.";
+                karier = "Karier Anda semakin solid.";
+            } else if ((tgl >= 21 && tgl <= 31 && bln == 5) || (tgl >= 1 && tgl <= 20 && bln == 6)) {
+                zodiak = "Gemini";
+                kesehatan = "Tetap aktif dan bergerak.";
+                asmara = "Kejutan asmara menanti.";
+                keuangan = "Jangan boros, simpan uang Anda.";
+                karier = "Proyek baru akan dimulai.";
+            } else if ((tgl >= 21 && tgl <= 30 && bln == 6) || (tgl >= 1 && tgl <= 22 && bln == 7)) {
+                zodiak = "Cancer";
+                kesehatan = "Perbanyak istirahat.";
+                asmara = "Saatnya memperbaiki hubungan asmara.";
+                keuangan = "Keuangan dalam kondisi baik.";
+                karier = "Promosi jabatan di depan mata.";
+            } else if ((tgl >= 23 && tgl <= 31 && bln == 7) || (tgl >= 1 && tgl <= 22 && bln == 8)) {
+                zodiak = "Leo";
+                kesehatan = "Jaga kesehatan dengan berolahraga.";
+                asmara = "Asmara akan berbunga-bunga.";
+                keuangan = "Investasi akan menguntungkan.";
+                karier = "Kesuksesan karier semakin dekat.";
+            } else if ((tgl >= 23 && tgl <= 31 && bln == 8) || (tgl >= 1 && tgl <= 22 && bln == 9)) {
+                zodiak = "Virgo";
+                kesehatan = "Hindari stres berlebihan.";
+                asmara = "Hubungan asmara perlu perhatian.";
+                keuangan = "Jaga pengeluaran Anda.";
+                karier = "Pekerjaan Anda akan dihargai.";
+            } else if ((tgl >= 23 && tgl <= 30 && bln == 9) || (tgl >= 1 && tgl <= 22 && bln == 10)) {
+                zodiak = "Libra";
+                kesehatan = "Tetap seimbang dalam hidup.";
+                asmara = "Komunikasi penting dalam asmara.";
+                keuangan = "Keuangan akan membaik.";
+                karier = "Proyek besar menanti Anda.";
+            } else if ((tgl >= 23 && tgl <= 31 && bln == 10) || (tgl >= 1 && tgl <= 21 && bln == 11)) {
+                zodiak = "Scorpio";
+                kesehatan = "Jaga kesehatan jiwa Anda.";
+                asmara = "Cinta akan semakin kuat.";
+                keuangan = "Keuangan cukup stabil.";
+                karier = "Tantangan karier di depan mata.";
+            } else if ((tgl >= 22 && tgl <= 30 && bln == 11) || (tgl >= 1 && tgl <= 21 && bln == 12)) {
+                zodiak = "Sagitarius";
+                kesehatan = "Tetap aktif dan energik.";
+                asmara = "Romansa akan meningkat.";
+                keuangan = "Pendapatan tambahan akan datang.";
+                karier = "Karier Anda akan berkembang.";
+            } else if ((tgl >= 22 && tgl <= 31 && bln == 12) || (tgl >= 1 && tgl <= 19 && bln == 1)) {
+                zodiak = "Capricorn";
+                kesehatan = "Jaga kesehatan dengan diet seimbang.";
+                asmara = "Asmara akan harmonis.";
+                keuangan = "Tabungan akan bertambah.";
+                karier = "Promosi jabatan mungkin terjadi.";
+            } else {
+                hasil = "Tanggal atau bulan tidak valid.";
+                document.getElementById("hasil").innerText = hasil;
+                return false;
+            }
+
+
+            document.getElementById("zodiak").value = zodiak;
+            document.getElementById("kesehatan").value = kesehatan;
+            document.getElementById("asmara").value = asmara;
+            document.getElementById("keuangan").value = keuangan;
+            document.getElementById("karier").value = karier;
+
+            return false;
+        }
+    </script>
+</body>
+</html>
